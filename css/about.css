@@ -1,0 +1,83 @@
+
+.sec-title {
+  display: block;
+  width: 80vw;
+  margin: auto;
+  font-size: 1.9rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--color-foreground);
+}
+
+.abt {
+  display: flex;
+  gap: 2rem;
+}
+
+.abt > div {
+  flex: 1 1;
+  width: 50%;
+  height: auto;
+}
+
+.abt > .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abt > div > img {
+  width: 400px;
+  height: 400px;
+  border-radius: 10%;
+  filter: saturate(0.4) blur(3px);
+}
+
+.abt > div:nth-child(2) {
+  padding: 2.7rem;
+}
+
+.abt > div > span {
+  display: block;
+  font-size: xx-large;
+  font-family: var(--font-family3);
+  font-weight: 900;
+  color: var(--color-foreground);
+  margin: 1.5rem;
+}
+
+.abt > div > p {
+  font-family: var(--font-family3);
+  font-size: 1.4rem;
+  padding: 1.5rem 1.5rem 3rem 1.5rem ;
+} 
+
+.resume {
+  width: 200px;
+  text-align: center;
+  padding: 1rem;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  font-family: var(--font-family3);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-btn1);
+  border-radius: 15px;
+  box-shadow: 3px 3px 4px;
+}
+
+.hr-1 {
+  width: 90%;
+  margin: auto;
+}
+
+.hr-e {
+  margin-bottom: 1.5rem;
+}
+
+
+/* Media qureys */
+@media only screen and (max-width: 712px){
+  .abt {
+    flex-flow: column wrap;
+  }
+}
