@@ -61,7 +61,7 @@ nav {
 }
 
 .line {
-  width: 20px;
+  width: 30px;
   height: 3px;
   background-color: var(--color-foreground);
   margin: 3px 0;
