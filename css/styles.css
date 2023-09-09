@@ -67,6 +67,21 @@ nav {
   margin: 3px 0;
 }
 
+.abt{
+  border: 1.5px solid var(--color-foreground);
+  border-radius: 10px;
+  padding: 8px;
+  background-color: var(--color-foreground);
+}
+
+.abt > .fr {
+  color: var(--color-background-2) !important;
+} 
+
+.fr:hover {
+  text-decoration: underline;
+}
+
 .nav-link {
   display: flex;
   justify-content: space-between;
