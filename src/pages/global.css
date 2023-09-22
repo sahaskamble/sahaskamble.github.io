@@ -46,9 +46,6 @@ html,body{
   border-bottom: 3px solid var(--color2);
 }
 
-.navbar{
-  display: none;
-}
 #navbar.active{
   display: block;
 }
