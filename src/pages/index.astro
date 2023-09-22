@@ -1,0 +1,88 @@
+---
+//components here...
+import Layout from '../layouts/Layout.astro';
+import SideNav from '../components/SideBarNav.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+//Images here...
+// import Peterpic from '/src/assets/profile.jpg';
+
+//Page CSS...
+import './global.css';
+---
+
+<Layout title="Welcome to my Portfolio">
+  <SideNav/>
+  <Navbar name="Sahas Kamble"/>
+	<main class="lg:ml-[300px] p-8 h-fit" id="main">
+    <div class=" md:w-[90%] mx-auto">
+      <p class="my-1 text-[1.5rem]">Hii, There 👋</p>
+      <h1 class="text-5xl md:text-6xl font-semibold my-4 mt-1 md:tracking-tight">I'm Sahas Kamble</h1>
+      <h2 class="text-2xl font-bold my-4">Web Developer &amp; Designer</h2>
+      <p class="my-5 text-[20px]">
+        I make <span class="text-[--accent] font-semibold">visually</span> stunning but fast web app's, whether you need E-commerce website or a Landing page for your
+        work, service. whatever design, however you want I'm there to help you with it. 
+      </p>
+      <div class="my-10 mx-0">
+        <button class="btn bg-[--primary] text-[--secondary] p-2 border-[2px] border-[--primary]">Let's Connect</button>
+        <button class="btn btn-cnt mx-6 p-2 px-3  text-[--secondary] border-[1px] border-[--fg-color]">Contact</button>
+      </div>
+
+      <div class="container">
+        <h3 class="text-3xl font-semibold ">Some of my Work &lt;&#47;&gt;</h3>
+        <div class="content md:flex">
+          <img class="md:w-[250px] md:h-[120px]" src="/public/img/profile.jpg" alt="sahas kamble">
+            <article class="flex flex-col items-start my-auto px-4">
+              <h3 class="text-2xl">Demo Project 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              </p>
+            </article>
+          <hr>
+        </div>
+        <div class="content md:flex">
+          <img class="md:w-[250px] md:h-[120px]" src="/public/img/profile.jpg" alt="sahas kamble">
+            <article class="flex flex-col items-start my-auto px-4">
+              <h3>Demo Project 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              </p>
+            </article>
+          <hr>
+        </div>
+        <div class="content md:flex">
+          <img class="md:w-[250px] md:h-[120px]" src="/public/img/profile.jpg" alt="sahas kamble">
+            <article class="flex flex-col items-start my-auto px-4">
+              <h3>Demo Project 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              </p>
+            </article>
+          <hr>
+        </div>
+        <div class="content md:flex">
+          <img class="md:w-[250px] md:h-[120px]" src="/public/img/profile.jpg" alt="sahas kamble">
+            <article class="flex flex-col items-start my-auto px-4">
+              <h3>Demo Project 1</h3>
+              <p>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              </p>
+            </article>
+        </div>
+      </div>
+    </div>
+	</main>
+  <hr class="w-[80dvw] mx-auto">
+  <Footer/>
+</Layout>
+
+<style>
+  .content{
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+  .content > img{
+    border-radius: 10px;
+  }
+</style>
