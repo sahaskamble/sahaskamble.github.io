@@ -11,6 +11,9 @@ opennav.addEventListener('click', ()=> {
 const closenav = document.getElementById('closenav');
 
 closenav.addEventListener('click', ()=> {
-  bar.classList.toggle('active');
-  bar.classList.toggle('inactive');
+  
+  //some fucking logic for my ego
+  if (bar.classList.contains('active')) {
+    bar.classList.remove('active');
+  }
 });
