@@ -3,11 +3,12 @@ const { name } = Astro.props;
 ---
 
 <footer class="lg:ml-[300px] m-4 ">
-  <ul class="ul flex justify-evenly items-center text-[30px] mb-2">
-    <span class="links"><a href=""><i class="fa fa-coffee"></i></a></span>
-    <span class="links"><a href="https://githun.com/sahaskamble"><i class="fa fa-github"></i></a></span>
-    <span class="links"><a href=""><i class="fa fa-twitter"></i></a></span>
-    <span class="links"><a href=""><i class="fa fa-rss"></i></a></span>
+  <ul class="flex justify-evenly items-center text-[30px] mb-2 lg:hidden">
+    <span ><a href="https://githun.com/sahaskamble"><i class="fa fa-github"></i></a></span>
+    <span ><a href=""><i class="fa fa-twitter"></i></a></span>
+    <span ><a href=""><i class="fa fa-coffee"></i></a></span>
+    <span ><a href=""><i class="fa fa-rss"></i></a></span>
   </ul>  
-  <span class="lg:ml-[300px] w-[60%]">@copy; 2023 Sahas Kamble made using <a href="https://astro.build">"Astro-js"</a> with <a href="https://tailwindcss.com">"tailwindcss"</a></span>
+  <span class="block text-center text-[20px] m-6 p-4 mb-0 ">&copy; 2023 {name}</span>
+  <span class="block text-center mx-3 ">Made using <a href="https://astro.build">"Astro-js"</a> with <a href="https://tailwindcss.com">"tailwindcss"</a> developed by Sahas Kamble</span>
 </footer>

@@ -4,7 +4,6 @@ const bar = document.getElementById('navbar');
 //Open navbar menu
 opennav.addEventListener('click', ()=> {
   bar.classList.toggle('active');
-  bar.classList.toggle('inactive');
 });
 
 //Close navbar menu
