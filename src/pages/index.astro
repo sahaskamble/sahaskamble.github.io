@@ -1,103 +1,136 @@
 ---
 //components here...
-import Layout from '../layouts/Layout.astro';
-import SideNav from '../components/SideBarNav.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import '../img/peter.jpg';
-import '../img/tux.png';
-
+import Layout from "../layouts/Layout.astro";
+import SideNav from "../components/SideBarNav.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import post1 from "../img/peter1.avif";
 //Page CSS...
-import './global.css';
+import "./global.css";
 ---
 
 <Layout title="Welcome to my Portfolio">
-  <SideNav/>
-  <Navbar name="Sahas Kamble"/>
-	<main class="lg:ml-[300px] p-8 h-fit" id="closenav">
-    <article class=" md:w-[100%] h-fit px-[6%] py-8 mx-auto">
+  <SideNav />
+  <Navbar name="Sahas Kamble" />
+  <main class="lg:ml-[300px] p-8 h-fit" id="closenav">
+    <article class="md:w-[100%] h-fit px-[6%] py-8 mx-auto">
       <p class="my-1 text-[1.5rem]">Hii, There 👋</p>
-      <h1 class="text-5xl md:text-6xl font-semibold my-4 mt-1 md:tracking-tight">I'm Sahas Kamble</h1>
+      <h1
+        class="text-5xl md:text-6xl font-semibold my-4 mt-1 md:tracking-tight"
+      >
+        I'm Sahas Kamble
+      </h1>
       <h2 class="text-2xl font-bold my-4">Web Developer &amp; Programmer</h2>
       <p class="my-5 text-[20px]">
-        my pitch :- 
-        <br>
-        I make <span class="text-[--accent] font-semibold">visually</span> stunning but fast web app's, whether you need E-commerce website or a landing page for your
-        work, service. Whatever design, however you want I'm there to help you with it. 
+        I make <span class="text-[--accent] font-semibold">visually</span>
+         stunning but fast web app's, whether you need E-commerce website or a
+        landing page for your work, service. Whatever design, however you want
+        I'm there to help you with it.
       </p>
       <div class="text-[20px] my-10 mx-0 flex gap-6">
-        <button class="bg-[--fg-color] text-[--bg-color] p-2 ">Let's Connect</button>
-        <button class="hover:bg-[--fg-color] hover:text-[--bg-color] p-2 px-3 text-[--fg-color] border-[1px] border-[--fg-color]"><a href="mailto:sahaskamble282@gmail.com">Contact</a></button>
+        <button class="bg-[--fg-color] text-[--bg-color] p-2"
+          >Let's Connect</button
+        >
+        <button
+          class="hover:bg-[--fg-color] hover:text-[--bg-color] p-2 px-3 text-[--fg-color] border-[1px] border-[--fg-color]"
+          ><a href="mailto:sahaskamble282@gmail.com">Contact</a></button
+        >
       </div>
 
-      <article class="container " id="aboutme">
+      <article class="container" id="aboutme">
         <h3 class="text-3xl font-semibold">About me</h3>
-          <p class="text-xl my-8">
-            I love using Linux, doing programming bulding stuff and solving problems I had while using Linux.
-            So, recently I started learning frontend development and started using js frameworks like react, 
-            next, angular and stumbled upon astro which actually has a very easy learning curve. So as a part 
-            of learning curve I made this Portfolio site which is mostly inspired by <a class="underline" href="https://github.com/manuelernestog/astrofy">Manuel Ernesto's
-            Astrofy template</a> so do check out his website template too. 
-          </p>
+        <p class="text-xl my-8">
+          I love using Linux, doing programming bulding stuff and solving
+          problems I had while using Linux. So, recently I started learning
+          frontend development and started using js frameworks like react, next,
+          angular and stumbled upon astro which actually has a very easy
+          learning curve. So as a part of learning curve I made this Portfolio
+          site which is mostly inspired by <a
+            class="underline"
+            href="https://github.com/manuelernestog/astrofy"
+            >Manuel Ernesto's Astrofy template</a
+          > so do check out his website template too.
+        </p>
       </article>
-  
+
       <div class="container">
-        <h3 class="text-3xl font-semibold ">Some of my Work &lt;&#47;&gt;</h3>
+        <h3 class="text-3xl font-semibold">Some of my Work &lt;&#47;&gt;</h3>
         <div class="content md:flex">
-          <img src="../img/peter.jpg" class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg  " alt="Profilepic">
-            <div class="flex flex-col items-start my-auto px-4">
-              <h3 class="text-2xl">Demo Project 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-              </p>
-            </div>
-          <hr>
+          <Image
+            src={post1}
+            class="w-full h-[40dvh] md:w-[13rem] md:h-[6.5rem] rounded-lg"
+            alt="Profilepic"
+          />
+          <div class="flex flex-col items-start my-auto px-4">
+            <h3 class="text-2xl">Demo Project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </p>
+          </div>
+          <hr />
         </div>
         <div class="content md:flex">
-          <img src="../img/peter.jpg" class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg  " alt="Profilepic">
-            <div class="flex flex-col items-start my-auto px-4">
-              <h3>Demo Project 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-              </p>
-            </div>
-          <hr>
+          <Image
+            src={post1}
+            class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg"
+            alt="Profilepic"
+          />
+          <div class="flex flex-col items-start my-auto px-4">
+            <h3>Demo Project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </p>
+          </div>
+          <hr />
         </div>
         <div class="content md:flex">
-          <img src="../img/peter.jpg" class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg  " alt="Profilepic">
-            <div class="flex flex-col items-start my-auto px-4">
-              <h3>Demo Project 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-              </p>
-            </div>
-          <hr>
+          <Image
+            src={post1}
+            class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg"
+            alt="Profilepic"
+          />
+          <div class="flex flex-col items-start my-auto px-4">
+            <h3>Demo Project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </p>
+          </div>
+          <hr />
         </div>
         <div class="content md:flex">
-          <img src="../img/peter.jpg" class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg  " alt="Profilepic">
-            <div class="flex flex-col items-start my-auto px-4">
-              <h3>Demo Project 1</h3>
-              <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-              </p>
-            </div>
+          <Image
+            src={post1}
+            class="w-full h-[20%] md:w-[13rem] md:h-[6.5rem] rounded-lg"
+            alt="Profilepic"
+          />
+          <div class="flex flex-col items-start my-auto px-4">
+            <h3>Demo Project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </p>
+          </div>
         </div>
       </div>
     </article>
-	</main>
-  <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px] p-4 ">
-  <Footer name="Sahas kamble"/>
+  </main>
+  <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px] p-4" />
+  <Footer name="Sahas kamble" />
 </Layout>
 
 <style>
-  .content{
+  .content {
     margin: 2rem 0;
     padding: 0 1rem;
   }
-  .content > .image{
+  .content > .image {
     width: 210px;
     height: 100px;
-    background-image: url('../img/peter.jpg');
+    background-image: url("../img/peter.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
