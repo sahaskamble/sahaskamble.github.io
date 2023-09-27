@@ -2,7 +2,7 @@ const opennav = document.getElementById('hamburger');
 const bar = document.getElementById('navbar');
 
 //Open navbar menu
-opennav.addEventListener('click', ()=> {
+opennav.addEventListener('click', () => {
   bar.classList.toggle('active');
 
   if (closenav.style.cursor !== 'pointer') {
@@ -13,8 +13,8 @@ opennav.addEventListener('click', ()=> {
 //Close navbar menu
 const closenav = document.getElementById('closenav');
 
-closenav.addEventListener('click', ()=> {
-  
+closenav.addEventListener('click', () => {
+
   //some fucking logic for my ego
   if (bar.classList.contains('active')) {
     bar.classList.remove('active');
@@ -26,13 +26,28 @@ closenav.addEventListener('click', ()=> {
 
 var startScrollpos = window.scrollY;
 
-window.onscroll = ()=> {
+window.onscroll = () => {
   var currentScrollpos = window.scrollY;
 
   if (startScrollpos > currentScrollpos) {
-    document.getElementById('scrollbtn').style.display = 'block'; 
+    document.getElementById('scrollbtn').style.display = 'block';
   } else {
     document.getElementById('scrollbtn').style.display = 'none';
   }
   startScrollpos = currentScrollpos;
 }
+
+var x = window.matchMedia("(max-width: 700px)");
+const arrow = document.getElementById('scrollbtn');
+
+function myfun(x) {
+  if (x.matches) {
+    arrow.classList.toggle('hide');
+  } else {
+    arrow.classList.remove('hide');
+  }
+}
+
+myfun(x)
+
+x.addListener(myfun())
