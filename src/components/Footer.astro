@@ -2,7 +2,7 @@
 const { name } = Astro.props;
 ---
 
-<footer class="lg:ml-[300px] m-4">
+<footer class="lg:ml-[300px] p-4 bg-[--color1] lg:bg-[--bg-color]">
   <ul
     class="flex justify-center items-center gap-12 text-[25px] mb-2 lg:hidden"
   >
@@ -61,7 +61,7 @@ const { name } = Astro.props;
       </a></span
     >
   </ul>
-  <span class="block text-center text-[20px] m-6 p-4 mb-0"
+  <span class="block text-center text-[20px] p-4 mb-0"
     >&copy; 2023 {name}</span
   >
   <span class="block text-center mx-3"

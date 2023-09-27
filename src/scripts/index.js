@@ -21,3 +21,18 @@ closenav.addEventListener('click', ()=> {
     closenav.style.cursor = 'default';
   }
 });
+
+//Window Scroll for Elements
+
+var startScrollpos = window.scrollY;
+
+window.onscroll = ()=> {
+  var currentScrollpos = window.scrollY;
+
+  if (startScrollpos > currentScrollpos) {
+    document.getElementById('scrollbtn').style.display = 'block'; 
+  } else {
+    document.getElementById('scrollbtn').style.display = 'none';
+  }
+  startScrollpos = currentScrollpos;
+}

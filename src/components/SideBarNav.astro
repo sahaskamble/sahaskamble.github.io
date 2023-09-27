@@ -8,11 +8,11 @@ import { Icon } from "astro-icon"
 ---
 
 <nav
-  class="navbar hidden fixed left-0 w-[300px] md:h-full h-screen bg-[--color1] lg:flex lg:justify-evenly flex-col"
+  class="navbar hidden fixed backdrop-blur-3xl left-0 w-[300px] md:h-full h-screen bg-[--color1] lg:flex lg:justify-evenly flex-col"
   id="navbar"
 >
   <div class="flex justify-center items-center flex-col px-8 py-8 md:pt-0 pb-5">
-    <Image src={Profilepic} alt="Profile pic" class="w-[120px] h-[120px]" />
+    <Image src={Profilepic} alt="Profile pic" class="w-[120px] h-[120px] rounded" />
   </div>
   <div class="lg:h-[60%] text-[20px]">
     <ul
@@ -21,7 +21,7 @@ import { Icon } from "astro-icon"
       <a class="w-[269px] mx-4 mb-1 px-4 py-2 bg-[--bg-color]" href="/">Home</a>
       <a
         class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]"
-        href="/work">Work</a
+        href="/work">About</a
       >
       <a
         class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]"

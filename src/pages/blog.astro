@@ -12,10 +12,32 @@ import "./global.css";
 <Layout title="My Work">
   <SideNav />
   <Navbar name="Sahas kamble" />
-  <main class="w-full" id="closenav">
+  <main class="lg:ml-[300px] " id="closenav">
     <article>
       <h1>This is work page</h1>
     </article>
+    
+    <article
+      class="container lg:px-[6%] px-0 h-screen grid place-content-center "
+      id="aboutme"
+    >
+      <div class="p-3">
+        <h3 class="text-3xl font-semibold">About me</h3>
+        <p class="text-xl my-8">
+          I love using Linux, doing programming bulding stuff and solving
+          problems I had while using Linux. So, recently I started learning
+          frontend development and started using js frameworks like react, next,
+          angular and stumbled upon astro which actually has a very easy
+          learning curve. So as a part of learning curve I made this Portfolio
+          site which is mostly inspired by <a
+            class="underline"
+            href="https://github.com/manuelernestog/astrofy"
+            >Manuel Ernesto's Astrofy template</a
+          > so do check out his website template too.
+        </p>
+      </div>
+    </article>
+
   </main>
   <Footer />
 </Layout>
