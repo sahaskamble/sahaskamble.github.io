@@ -1,13 +1,14 @@
 ---
 //components here...
-import Layout from "../layouts/Layout.astro"
-import SideNav from "../components/SideBarNav.astro"
-import Navbar from "../components/Navbar.astro"
-import Footer from "../components/Footer.astro"
-import { Image } from "astro:assets"
-import post1 from "../img/post.webp"
+import Layout from "../layouts/Layout.astro";
+import SideNav from "../components/SideBarNav.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import post1 from "/public/img/profile.jpg";
+
 //Page CSS...
-import "./global.css"
+import "../global/global.css"
 ---
 
 <Layout title="Welcome to my Portfolio">
@@ -102,7 +103,7 @@ import "./global.css"
       border-radius: 10px;
     }
     .project {
-      transistion: transform ;
+      transistion: transform;
     }
     .project:hover {
       transform: scale(1.08);
