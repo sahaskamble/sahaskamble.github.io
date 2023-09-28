@@ -1,21 +1,46 @@
 ---
 //Components
-import Layout from "../layouts/Layout.astro";
-import SideNav from "../components/SideBarNav.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro"
+import SideNav from "../components/SideBarNav.astro"
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import { Image } from "astro:asstes";
 
 //CSS
-import "./global.css";
+import "./global.css"
 ---
 
-<Layout title="My Work">
+<Layout title="About me">
   <SideNav />
   <Navbar name="Sahas kamble" />
-  <main class="w-full ml-[300px]" id="closenav">
-    <article>
-      <h1>This is work page</h1>
-    </article>
+  <main class="h-fit ml-[300px]" id="closenav">
+    <section class="p-4 w-[70dvw] mx-auto ">
+      <div class=""><h1 class="text-5xl font-semibold py-4 ">Who I am 🤔</h1></div>
+      <div class="font-medium text-xl">
+        <p class="leading-normal">
+          Hey there, I'm Sahas kamble, your friendly neighborhood code sorcerer and design wizard! 💻 ✨
+          I'm a 3<sup>th</sup> year BCA(Bachlores of Computer Application) student at Aptech Institution
+
+        </p>
+      </div>
+    </section>
+    <section class="p-4 w-[70dvw] mx-auto ">
+      <div class=""><h1 class="text-5xl font-semibold py-4 ">What I use</h1></div>
+      <div class="font-medium text-xl">
+        <p>
+
+          Hello I'm Sahas kamble, a passionate programmer and web designer on a
+          journey to craft digital experiences that merge creativity with
+          functionality. I've always been captivated by the boundless
+          possibilities of the digital realm, and it's this fascination that
+          fuels my work. With a deep-rooted love for coding, I bring ideas to
+          life by crafting elegant and efficient solutions. My journey started
+          with a humble "Hello World" and has since evolved into a diverse skill
+          set that spans across front-end and back-end technologies, allowing me
+          to architect seamless and intuitive web applications.
+        </p>
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>

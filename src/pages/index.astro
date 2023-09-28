@@ -13,7 +13,7 @@ import "./global.css"
 <Layout title="Welcome to my Portfolio">
   <SideNav />
   <Navbar name="Sahas Kamble" />
-  <main class="lg:ml-[300px] h-fit " id="closenav">
+  <main class="lg:ml-[300px] h-fit" id="closenav">
     <div class="lg:h-screen p-4 grid place-items-center">
       <article class="md:w-[100%] h-fit md:px-[4%] py-8 pb-0 mx-auto">
         <p class="my-1 text-[1.5rem]">Hii, There 👋</p>
@@ -43,56 +43,69 @@ import "./global.css"
 
     <div class="container lg:px-[3%] mx-auto" id="extra">
       <h3 class="text-3xl font-semibold">Some of my Work &lt;&#47;&gt;</h3>
-      <div class="content flex justify-evenly flex-1 gap-8 lg:flex-row flex-col">
-        <div class="project1 py-3 w-[100%] my-auto lg:h-fit ">
-          <Image src={post1} alt="Post 1" class="w-full h-[45dvh] lg:h-fit rounded-xl" />
+      <div
+        class="content flex justify-evenly flex-1 gap-8 lg:flex-row flex-col"
+      >
+        <a href="/" class="project py-3 w-[100%] my-auto lg:h-fit">
+          <Image
+            src={post1}
+            alt="Post 1"
+            class="w-full h-[45dvh] lg:h-fit rounded-xl"
+          />
           <div class="px-4 mt-3">
-            <span class="text-3xl font-semibold">Project1</span>
+            <span class="text-3xl font-semibold"
+              >Project1
+              <span
+                class="inline-block whitespace-nowrap rounded-[0.27rem] bg-[--fg-color] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[15px] font-bold leading-none text-[--bg-color]"
+                >New</span
+              >
+            </span>
             <p>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
             </p>
           </div>
-        </div>
-        <div class="project2 py-3 w-[100%] lg:h-fit my-auto">
-          <Image src={post1} alt="Post 2" class="w-full h-[45dvh] lg:h-fit rounded-xl" />
-          <div class="px-4 mt-3">
-            <span class="text-3xl font-semibold">Project2</span>
-            <p>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
-            </p>
-          </div>
-        </div>
+          <a href="/" class="project py-3 w-[100%] lg:h-fit my-auto">
+            <Image
+              src={post1}
+              alt="Post 2"
+              class="w-full h-[45dvh] lg:h-fit rounded-xl"
+            />
+            <div class="px-4 mt-3">
+              <span class="text-3xl font-semibold"
+                >Project2
+                <span
+                  class="inline-block whitespace-nowrap rounded-[0.27rem] bg-[--fg-color] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[15px] font-bold leading-none text-[--bg-color]"
+                  >New</span
+                >
+              </span>
+              <p>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                sint cillum sint consectetur cupidatat.
+              </p>
+            </div>
+          </a>
+        </a>
       </div>
     </div>
-    <a href="#extra" class="btnscroll hidden lg:block fixed bottom-8 border-[--fg-color] " id="scrollbtn"></a>
   </main>
   <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px] p-4" />
   <Footer name="Sahas kamble" />
-</Layout>
 
-<style>
-  .content {
-    margin: 2rem 0;
-    padding: 0 1rem;
-    width: 100%;
-    /* background-color: var(--color1); */
-  }
-  .content > .image {
-    border-radius: 10px;
-  }
-  .btnscroll{
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 60dvw;
-    transform: rotate(45deg);
-    border-right: 2px solid;
-    border-bottom: 2px solid;
-  }
-  .btnscroll:hover{
-    box-shadow: 5px 5px 4px;
-  }
-  .btnscroll.hide{
-    display: none;
-  }
-</style>
+  <style>
+    .content {
+      margin: 2rem 0;
+      padding: 0 1rem;
+      width: 100%;
+    }
+    .content > .image {
+      border-radius: 10px;
+    }
+    .project {
+      transistion: transform ;
+    }
+    .project:hover {
+      transform: scale(1.08);
+    }
+  </style>
+</Layout>
