@@ -1,37 +1,47 @@
 ---
 import { Image } from "astro:assets"
-import Profilepic from "../img/profile.jpg"
-import { Icon } from "astro-icon"
+import Profilepic from "../../public/pic_profile.svg"
+// import { Icon } from "astro-icon"
 // import { Jscript } from '../scripts/index.js';
 
 // const { name } = Astro.props;
 ---
 
 <nav
-  class="navbar hidden fixed backdrop-blur-3xl left-0 w-[300px] md:h-full h-screen bg-[--color1] lg:flex lg:justify-evenly flex-col"
+  class="navbar hidden fixed backdrop-blur-3xl left-0 w-[300px] md:h-full h-screen bg-[--fg-color] text-[--primary] lg:flex lg:justify-evenly flex-col"
   id="navbar"
 >
-  <div class="flex justify-center items-center flex-col px-8 py-8 md:pt-0 pb-5">
-    <Image src={Profilepic} alt="Profile pic" class="w-[120px] h-[120px] rounded" />
+  <div
+    class="flex justify-center items-center flex-col px-8 py-8 mt-4 md:pt-0 pb-5"
+  >
+    <Image
+      src={Profilepic}
+      alt="Profile pic"
+      class="w-[120px] h-[120px] rounded"
+    />
   </div>
   <div class="lg:h-[60%] text-[20px]">
     <ul
-      class="flex flex-col justify-evenly text-[--fg-color] cursor-pointer h-[35dvh]"
+      class="flex flex-col justify-evenly text-[--bg-color] font-semibold cursor-pointer h-[35dvh]"
     >
-      <a class="w-[269px] mx-4 mb-1 px-4 py-2 bg-[--bg-color]" href="/">Home</a>
       <a
-        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]"
+        class="w-[269px] mx-4 mb-1 px-4 py-2 bg-[--color1] text-[--fg-color]"
+        href="/">Home</a
+      >
+      <a
+        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--color1] hover:text-[--fg-color]"
         href="/about">About</a
       >
       <a
-        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]"
+        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--color1] hover:text-[--fg-color]"
         href="/blog">Blog</a
       >
-      <a class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]" href="/cv"
-        >CV</a
+      <a
+        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--color1] hover:text-[--fg-color]"
+        href="/cv">CV</a
       >
       <a
-        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--bg-color]"
+        class="w-[269px] mx-4 mb-1 px-4 py-2 hover:bg-[--color1] hover:text-[--fg-color]"
         href="mailto:sahaskamble282@gmail.com">Contact</a
       >
     </ul>
@@ -96,8 +106,14 @@ import { Icon } from "astro-icon"
   <style>
     svg {
       /* fill: #efc382; */
-      fill: var(--fg-color);
-      font-size: 25px;
+      fill: var(--bg-color);
+      font-size: 28px;
+    }
+    svg:hover {
+      fill: var(--accent);
+    }
+    nav {
+      color: var(--bg-color);
     }
   </style>
 </nav>

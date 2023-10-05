@@ -1,8 +1,8 @@
 ---
-const { name } = Astro.props;
+const { name } = Astro.props
 ---
 
-<footer class="lg:ml-[300px] p-4 bg-[--color1] lg:bg-[--bg-color]">
+<footer class="m-4 bg-[--color1] text-center">
   <ul
     class="flex justify-center items-center gap-12 text-[25px] mb-2 lg:hidden"
   >
@@ -61,9 +61,7 @@ const { name } = Astro.props;
       </a></span
     >
   </ul>
-  <span class="block text-center text-[20px] p-4 mb-0"
-    >&copy; 2023 {name}</span
-  >
+  <span class="block text-center text-[20px] p-4 mb-0">&copy; 2023 {name}</span>
   <span class="block text-center mx-3"
     >Made using <a class="underline" href="https://astro.build">Astro-js</a>
      with <a class="underline" href="https://tailwindcss.com">tailwindcss</a>

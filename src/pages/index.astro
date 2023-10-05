@@ -1,112 +1,162 @@
 ---
 //components here...
-import Layout from "../layouts/Layout.astro";
-import SideNav from "../components/SideBarNav.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import { Image } from "astro:assets";
-import post1 from "/public/img/profile.jpg";
+import Layout from "../layouts/Layout.astro"
+import SideNav from "../components/SideBarNav.astro"
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import { Icon } from "astro-icon"
+// import { Image } from "astro:assets"
+// import post1 from "/public/img/profile.jpg"
 
 //Page CSS...
 import "../global/global.css"
 ---
 
-<Layout title="Welcome to my Portfolio">
+<Layout title="Sahas kamble, aka SK">
   <SideNav />
   <Navbar name="Sahas Kamble" />
   <main class="lg:ml-[300px] h-fit" id="closenav">
-    <div class="lg:h-screen p-4 grid place-items-center">
+    <div
+      class="lg:h-screen sm:h-[90dvh] p-4 grid place-items-center border-[--fg-color] border-b-2"
+    >
       <article class="md:w-[100%] h-fit md:px-[4%] py-8 pb-0 mx-auto">
-        <p class="my-1 text-[1.5rem]">Hii, There 👋</p>
+        <p class="text-[1.5rem]">👋 I make website</p>
         <h1
-          class="text-6xl lg:text-8xl font-semibold my-4 mt-1 md:tracking-tight"
+          class="text-[85px] leading-[1] lg:text-8xl font-semibold my-4 mt-1 md:tracking-tight"
+          id="name"
         >
-          I'm Sahas Kamble
+          Sahas Kamble
         </h1>
-        <h2 class="text-2xl font-bold my-4">Web Developer &amp; Programmer</h2>
-        <p class="my-5 text-[20px]">
+        <h2 class="text-3xl font-bold my-4">Web Developer &amp; Programmer</h2>
+        <p class="my-5 text-2xl">
           I make <span class="text-[--accent] font-semibold">visually</span>
            stunning but fast web app's, whether you need E-commerce website or a
           landing page for your work, service. Whatever design, however you want
           I'm there to help you with it.
         </p>
         <div class="text-[20px] my-10 mx-0 flex gap-6">
-          <button class="bg-[--fg-color] text-[--bg-color] p-2"
+          <button class="bg-[--accent] text-[--bg-color] p-2"
             >Let's Connect</button
-          >
-          <button
-            class="hover:bg-[--fg-color] hover:text-[--bg-color] p-2 px-3 text-[--fg-color] border-[1px] border-[--fg-color]"
-            ><a href="mailto:sahaskamble282@gmail.com">Contact</a></button
           >
         </div>
       </article>
     </div>
 
-    <div class="container lg:px-[3%] mx-auto" id="extra">
-      <h3 class="text-3xl font-semibold">Some of my Work &lt;&#47;&gt;</h3>
-      <div
-        class="content flex justify-evenly flex-1 gap-8 lg:flex-row flex-col"
+    <div class="lg:px-[3%] mt-[100px] mx-auto" id="extra">
+      <!-- border-[--fg-color] border-b-2 -->
+      <h3 class="text-5xl font-semibold my-8 px-6 mb-8">Blog post's</h3>
+
+      <a
+        href=""
+        id="blog"
+        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
       >
-        <a href="/" class="project py-3 w-[100%] my-auto lg:h-fit">
-          <Image
-            src={post1}
-            alt="Post 1"
-            class="w-full h-[45dvh] lg:h-fit rounded-xl"
-          />
-          <div class="px-4 mt-3">
-            <span class="text-3xl font-semibold"
-              >Project1
-              <span
-                class="inline-block whitespace-nowrap rounded-[0.27rem] bg-[--fg-color] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[15px] font-bold leading-none text-[--bg-color]"
-                >New</span
-              >
-            </span>
-            <p>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </p>
-          </div>
-          <a href="/" class="project py-3 w-[100%] lg:h-fit my-auto">
-            <Image
-              src={post1}
-              alt="Post 2"
-              class="w-full h-[45dvh] lg:h-fit rounded-xl"
-            />
-            <div class="px-4 mt-3">
-              <span class="text-3xl font-semibold"
-                >Project2
-                <span
-                  class="inline-block whitespace-nowrap rounded-[0.27rem] bg-[--fg-color] px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[15px] font-bold leading-none text-[--bg-color]"
-                  >New</span
-                >
-              </span>
-              <p>
-                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-                sint cillum sint consectetur cupidatat.
-              </p>
-            </div>
-          </a>
-        </a>
+        <div class="my-auto h-fit">
+          <span class="text-4xl font-semibold mb-4 block w-full"
+            >Why I use Linux and you should to...</span
+          >
+          <span class="text-[--accent]">Linux info/rice</span>
+        </div>
+        <span class="text-[20px]">2022-12-21</span>
+      </a>
+      <a
+        href=""
+        id="blog"
+        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
+      >
+        <div class="my-auto h-fit">
+          <span class="text-4xl font-semibold mb-4 block w-full"
+            >neovim IDE setup using vim-distros...</span
+          >
+          <span class="text-[--accent]">Vim basic/IDE</span>
+        </div>
+        <span class="text-[20px]">2023-06-12</span>
+      </a>
+      <a
+        href=""
+        id="blog"
+        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
+      >
+        <div class="my-auto h-fit">
+          <span class="text-4xl font-semibold mb-4 block w-full"
+            >How to use Tmux for productivity...</span
+          >
+          <span class="text-[--accent]">Tmux info</span>
+        </div>
+        <span class="text-[20px]">2023-06-23</span>
+      </a>
+    </div>
+
+    <div
+      class="lg:px-[3%] h-fit mx-auto border-[--fg-color] border-b-2"
+      id="extra"
+    >
+      <div class="h-[80dvh] grid place-content-center my-[100px]">
+        <h2 class="text-5xl text-center font-semibold">bit about my self</h2>
+        <p class="text-3xl w-[80dvw] lg:w-[70dvw] mx-auto my-6">
+          I was a freelanc <strong class="text-[--accent]">frontend</strong>
+           developer from 2018 to 2020 and a python & bash automation scripter
+          from 2020 to 2021 and in recent years I'd worked as server maintainer.
+        </p>
+
+        <p class="text-3xl w-[80dvw] lg:w-[70dvw] mx-auto">
+          I began re-building my knowledge and learning React 2022. In four
+          months I received 4 certificarions from
+          <a
+            class="font-semibold underline text-[--accent]"
+            href="https://freecodecamp.org"
+            >freeCodeCamp <svg
+              class="inline underline"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              ><g fill="currentColor" fill-rule="evenodd"
+                ><path
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                ></path><path
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                ></path></g
+              ></svg
+            ></a
+          >
+        </p>
       </div>
+      <!-- <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px]" /> -->
+      <Footer name="Sahas kamble" />
+
+      <style>
+        .content {
+          margin: 2rem 0;
+          padding: 0 1rem;
+          width: 100%;
+        }
+        .content > .image {
+          border-radius: 10px;
+        }
+        .project {
+          transistion: transform;
+        }
+        .project:hover {
+          transform: scale(1.08);
+        }
+        #name {
+          text-shadow: 5px 3px 1px var(--accent);
+          margin-top: 30px;
+          margin-bottom: 35px;
+        }
+        #blog {
+          box-shadow: 5px 5px var(--accent);
+          border: 2px solid var(--accent);
+          margin-bottom: 50px;
+          margin-top: 50px;
+          transition: box-shadow 120ms;
+        }
+        #blog:hover {
+          box-shadow: none;
+          border: 1px solid var(--accent);
+        }
+      </style>
     </div>
   </main>
-  <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px] p-4" />
-  <Footer name="Sahas kamble" />
-
-  <style>
-    .content {
-      margin: 2rem 0;
-      padding: 0 1rem;
-      width: 100%;
-    }
-    .content > .image {
-      border-radius: 10px;
-    }
-    .project {
-      transistion: transform;
-    }
-    .project:hover {
-      transform: scale(1.08);
-    }
-  </style>
 </Layout>
