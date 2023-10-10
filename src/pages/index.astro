@@ -1,162 +1,106 @@
 ---
 //components here...
 import Layout from "../layouts/Layout.astro"
-import SideNav from "../components/SideBarNav.astro"
 import Navbar from "../components/Navbar.astro"
-import Footer from "../components/Footer.astro"
-import { Icon } from "astro-icon"
-// import { Image } from "astro:assets"
-// import post1 from "/public/img/profile.jpg"
+import { Image } from "astro:assets"
+
+//Images
+import logo from "../img/avatar.jpg"
+import bgc from "../img/backg.png"
 
 //Page CSS...
 import "../global/global.css"
 ---
 
 <Layout title="Sahas kamble, aka SK">
-  <SideNav />
-  <Navbar name="Sahas Kamble" />
-  <main class="lg:ml-[300px] h-fit" id="closenav">
+  <Navbar />
+
+  <div class="w-screen lg:w-[65dvw] h-fit mx-auto" id="main">
     <div
-      class="lg:h-screen sm:h-[90dvh] p-4 grid place-items-center border-[--fg-color] border-b-2"
+      class="mx-6 my-8 h-fit py-8 px-4 bg-[--primary] rounded-md flex flex-col justify-center items-center gap-8 md:flex-row"
     >
-      <article class="md:w-[100%] h-fit md:px-[4%] py-8 pb-0 mx-auto">
-        <p class="text-[1.5rem]">👋 I make website</p>
-        <h1
-          class="text-[85px] leading-[1] lg:text-8xl font-semibold my-4 mt-1 md:tracking-tight"
-          id="name"
-        >
-          Sahas Kamble
-        </h1>
-        <h2 class="text-3xl font-bold my-4">Web Developer &amp; Programmer</h2>
-        <p class="my-5 text-2xl">
-          I make <span class="text-[--accent] font-semibold">visually</span>
-           stunning but fast web app's, whether you need E-commerce website or a
-          landing page for your work, service. Whatever design, however you want
-          I'm there to help you with it.
-        </p>
-        <div class="text-[20px] my-10 mx-0 flex gap-6">
-          <button class="bg-[--accent] text-[--bg-color] p-2"
-            >Let's Connect</button
+      <Image
+        class="rounded-[50%] w-[200px] h-[200px] mx-4"
+        src={logo}
+        alt="Logo"
+      />
+      <div class="flex-1 lg:ml-8 flex flex-col items-start justify-center">
+        <h3 class="text-7xl font-bold my-2">Sahas kamble</h3>
+        <p class="text-xl">I love doing programming and making website's</p>
+        <div class="my-2 sm:h-[60px] h-[80px] flex items-center flex-wrap">
+          <span class="text-3xl bg-red-400 px-[0.60rem] py-1 rounded-lg"
+            ><a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a
+            ></span
+          >
+          <span
+            class="text-3xl text-black bg-white px-[0.70rem] py-1 mx-2 rounded-lg"
+            ><a href="https://github.com/sahaskamble"
+              ><i class="fa fa-github"></i></a
+            ></span
+          >
+          <span class="text-3xl bg-orange-400 px-[0.70rem] py-1 rounded-lg"
+            ><a href="/rss.xml"><i class="fa fa-rss"></i></a></span
+          >
+          <button
+            id="btn"
+            class="ml-0 sm:ml-2 bg-[--accent] mt-4 text-[#000] font-mono font-semibold text-xl md:text-2xl px-2 py-[0.5rem] rounded-md"
+            ><a href="/cv">Download CV</a></button
           >
         </div>
-      </article>
+      </div>
     </div>
 
-    <div class="lg:px-[3%] mt-[100px] mx-auto" id="extra">
-      <!-- border-[--fg-color] border-b-2 -->
-      <h3 class="text-5xl font-semibold my-8 px-6 mb-8">Blog post's</h3>
-
-      <a
-        href=""
-        id="blog"
-        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
-      >
-        <div class="my-auto h-fit">
-          <span class="text-4xl font-semibold mb-4 block w-full"
-            >Why I use Linux and you should to...</span
-          >
-          <span class="text-[--accent]">Linux info/rice</span>
-        </div>
-        <span class="text-[20px]">2022-12-21</span>
-      </a>
-      <a
-        href=""
-        id="blog"
-        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
-      >
-        <div class="my-auto h-fit">
-          <span class="text-4xl font-semibold mb-4 block w-full"
-            >neovim IDE setup using vim-distros...</span
-          >
-          <span class="text-[--accent]">Vim basic/IDE</span>
-        </div>
-        <span class="text-[20px]">2023-06-12</span>
-      </a>
-      <a
-        href=""
-        id="blog"
-        class="w-[85%] mx-auto h-fit rounded text-[--fg-color] p-6 flex flex-col sm:flex-row gap-8 items-center justify-around"
-      >
-        <div class="my-auto h-fit">
-          <span class="text-4xl font-semibold mb-4 block w-full"
-            >How to use Tmux for productivity...</span
-          >
-          <span class="text-[--accent]">Tmux info</span>
-        </div>
-        <span class="text-[20px]">2023-06-23</span>
-      </a>
+    <div class="mx-4 px-2">
+      <p class="text-2xl my-5">
+        Welcome to my site, here I make <span
+          class="text-[--accent] font-semibold">visually</span
+        > stunning but fast web app's whether you need a E-commerce website or a
+        landing page for your work/services.
+      </p>
+      <p class="text-2xl my-4">
+        I'm there to help you with it and styling is my speciality I've used
+        various CSS frameworks like tailwindcss, bootstrap, bulmacss, muicss,
+        etc... and recently starte learning a new js framework called astrojs
+        you can read more on my blog about it.
+      </p>
     </div>
 
-    <div
-      class="lg:px-[3%] h-fit mx-auto border-[--fg-color] border-b-2"
-      id="extra"
-    >
-      <div class="h-[80dvh] grid place-content-center my-[100px]">
-        <h2 class="text-5xl text-center font-semibold">bit about my self</h2>
-        <p class="text-3xl w-[80dvw] lg:w-[70dvw] mx-auto my-6">
-          I was a freelanc <strong class="text-[--accent]">frontend</strong>
-           developer from 2018 to 2020 and a python & bash automation scripter
-          from 2020 to 2021 and in recent years I'd worked as server maintainer.
-        </p>
-
-        <p class="text-3xl w-[80dvw] lg:w-[70dvw] mx-auto">
-          I began re-building my knowledge and learning React 2022. In four
-          months I received 4 certificarions from
-          <a
-            class="font-semibold underline text-[--accent]"
-            href="https://freecodecamp.org"
-            >freeCodeCamp <svg
-              class="inline underline"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              ><g fill="currentColor" fill-rule="evenodd"
-                ><path
-                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                ></path><path
-                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                ></path></g
-              ></svg
-            ></a
-          >
+    <div class="mx-4">
+      <h3 class="text-3xl mt-20 my-8 text-left font-semibold">
+        #I use Arch_BTW
+      </h3>
+      <div>
+        <p class="text-2xl">
+          So, this section is about what I daily drive and for the most part I
+          use <span class="text-[--accent] font-semibold">GNU/Linux</span> more specificaly I use ArchLinux
         </p>
       </div>
-      <!-- <hr class="lg:w-[70dvw] w-[80dvw] mx-auto lg:ml-[350px]" /> -->
-      <Footer name="Sahas kamble" />
-
-      <style>
-        .content {
-          margin: 2rem 0;
-          padding: 0 1rem;
-          width: 100%;
-        }
-        .content > .image {
-          border-radius: 10px;
-        }
-        .project {
-          transistion: transform;
-        }
-        .project:hover {
-          transform: scale(1.08);
-        }
-        #name {
-          text-shadow: 5px 3px 1px var(--accent);
-          margin-top: 30px;
-          margin-bottom: 35px;
-        }
-        #blog {
-          box-shadow: 5px 5px var(--accent);
-          border: 2px solid var(--accent);
-          margin-bottom: 50px;
-          margin-top: 50px;
-          transition: box-shadow 120ms;
-        }
-        #blog:hover {
-          box-shadow: none;
-          border: 1px solid var(--accent);
-        }
-      </style>
+      <div class="my-8">
+        <div class="mybg ">
+          <!-- w-[55dvw] h-[70dvh] mx-auto border-2 border-white w-[45dvw] h-[60dvh] -->
+          <Image src={bgc} alt="myimg" class=" mx-auto my-7" />
+        </div>
+      </div>
     </div>
-  </main>
+  </div>
 </Layout>
+
+<style>
+  @media (min-width: 375px) {
+    #btn {
+      margin-top: 0px;
+      margin-left: 0.5rem;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .mybg{
+    /* background-image: url('../img/backg.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(5px); */
+    /* -webkit-filter: blur(5px); */
+    position: sticky;
+    z-index: -10;
+  }
+</style>

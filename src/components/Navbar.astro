@@ -1,12 +1,102 @@
 ---
-//Astro Icons here...
-import { Icon } from "astro-icon"
+//for nav links
+const items = [
+  {
+    name: "~/Home",
+    path: "/",
+  },
+  {
+    name: "~/About",
+    path: "/about",
+  },
+  {
+    name: "~/Blog",
+    path: "/blog",
+  },
+  {
+    name: "~/Work",
+    path: "/work",
+  },
+]
 
-const { name } = Astro.props
+// Icon and images
+import { Icon } from "astro-icon"
+import { Image } from "astro:assets"
+//
+import Logo from "../img/Logo.jpg"
 ---
 
-<header class="flex justify-end lg:hidden">
-  <div class="hamburger p-5 lg:hidden" id="hamburger">
-    <Icon pack="ri" name="menu-fill" class="w-[40px] cursor-pointer" />
-  </div>
+<header class="w-[85dvw] mx-auto sticky top-0 bg-[--bg-color]">
+  <nav aria-label="Primary ">
+    <div class="flex justify-around items-center h-fit py-4">
+      <div class="text-2xl font-mono font-semibold pl-4">
+        <a href="/">Sahas@kamble:~</a>
+      </div>
+      <div class="flex-1"></div>
+      <div id="opennav" class="md:flex">
+        <ul id="navbar" class="hidden md:flex gap-2 font-[600] text-xl">
+          {
+            items.map((item) => (
+              <li>
+                <a href={item.path} class="px-4 py-3 hover:text-[#0c8ac5]">
+                  {item.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div
+        id="hamburger"
+        class="nav-links cursor-pointer flex items-center flex-col md:hidden"
+      >
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<style>
+  li > a {
+    transition: 100ms;
+    border: 0px solid var(--fg-color);
+  }
+  li > a:hover {
+    color: #498dc8;
+  }
+
+  .bar {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 11.5px) rotate(-45deg);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    transform: translate(0, -11.5px) rotate(45deg);
+  }
+
+  #navbar.active {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(29, 31, 33, 0.85);
+    backdrop-filter: blur(10px);
+  }
+</style>
