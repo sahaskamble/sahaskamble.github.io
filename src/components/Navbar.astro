@@ -6,39 +6,29 @@ const items = [
     path: "/",
   },
   {
+    name: "~/Skills",
+    path: "#skills",
+  },
+  {
     name: "~/About",
-    path: "/about",
-  },
-  {
-    name: "~/Blog",
-    path: "/blog",
-  },
-  {
-    name: "~/Work",
-    path: "/work",
+    path: "#about",
   },
 ]
-
-// Icon and images
-import { Icon } from "astro-icon"
-import { Image } from "astro:assets"
-//
-import Logo from "../img/Logo.jpg"
 ---
 
-<header class="w-[85dvw] mx-auto sticky top-0 bg-[--bg-color]">
+<header class="lg:w-[85dvw] w-full mx-auto sticky top-0 bg-[--bg-color]">
   <nav aria-label="Primary ">
     <div class="flex justify-around items-center h-fit py-4">
-      <div class="text-2xl font-mono font-semibold pl-4">
+      <div class="lg:text-3xl text-2xl font-mono font-semibold pl-6">
         <a href="/">Sahas@kamble:~</a>
       </div>
       <div class="flex-1"></div>
       <div id="opennav" class="md:flex">
-        <ul id="navbar" class="hidden md:flex gap-2 font-[600] text-xl">
+        <ul id="navbar" class="hidden md:flex gap-1 font-[600] text-xl">
           {
             items.map((item) => (
               <li>
-                <a href={item.path} class="px-4 py-3 hover:text-[#0c8ac5]">
+                <a href={item.path} class="px-2 py-3 hover:text-[#0c8ac5]">
                   {item.name}
                 </a>
               </li>
@@ -48,7 +38,7 @@ import Logo from "../img/Logo.jpg"
       </div>
       <div
         id="hamburger"
-        class="nav-links cursor-pointer flex items-center flex-col md:hidden"
+        class="nav-links mr-4 cursor-pointer flex items-center flex-col md:hidden"
       >
         <div class="bar bar1"></div>
         <div class="bar bar2"></div>

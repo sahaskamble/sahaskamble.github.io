@@ -1,3 +1,41 @@
 ---
-
+//variables
+const d = new Date()
+const { link } = Astro.props
 ---
+
+<footer class="w-full h-[20dvh] flex flex-col justify-between">
+  <section
+    class="flex justify-center text-4xl gap-12 border-b border-white w-[80dvw] mx-auto py-3"
+  >
+    <span class="icon">
+      <a href=""><i class="fa fa-youtube-play"></i></a>
+    </span>
+
+    <span class="icon">
+      <a href=""><i class="fa fa-github"></i></a>
+    </span>
+
+    <span class="icon">
+      <a href=""><i class="fa fa-instagram"></i></a>
+    </span>
+
+    <span class="icon">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+    </span>
+  </section>
+
+  <section class="w-full text-center my-4">
+    <span class="font-semibold text-xl"
+      >&copy;{d.getFullYear()}, <a class="hover:text-[--accent]" href="/"
+        >{link}</a
+      ></span
+    >
+  </section>
+</footer>
+
+<style>
+  .icon:hover {
+    color: var(--accent);
+  }
+</style>

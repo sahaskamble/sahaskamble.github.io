@@ -2,11 +2,11 @@
 //components here...
 import Layout from "../layouts/Layout.astro"
 import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
 import { Image } from "astro:assets"
 
 //Images
 import logo from "../img/avatar.jpg"
-import bgc from "../img/backg.png"
 
 //Page CSS...
 import "../global/global.css"
@@ -15,12 +15,18 @@ import "../global/global.css"
 <Layout title="Sahas kamble, aka SK">
   <Navbar />
 
-  <div class="w-screen lg:w-[65dvw] h-fit mx-auto" id="main">
+  <section
+    class="w-screen lg:w-[70dvw] h-fit mx-auto px-4 py-4 lg:px-0"
+    id="main"
+  >
+    <div class="text-4xl text-center font-semibold text-[--fg-color]">
+      Introducation
+    </div>
     <div
-      class="mx-6 my-8 h-fit py-8 px-4 bg-[--primary] rounded-md flex flex-col justify-center items-center gap-8 md:flex-row"
+      class="mx-auto my-8 h-fit py-8 px-4 bg-[--primary] rounded-md flex flex-col justify-center items-center gap-10 md:flex-row"
     >
       <Image
-        class="rounded-[50%] w-[200px] h-[200px] mx-4"
+        class="rounded-[50%] w-[200px] h-[200px] mr-2 ml-6"
         src={logo}
         alt="Logo"
       />
@@ -41,16 +47,17 @@ import "../global/global.css"
           <span class="text-3xl bg-orange-400 px-[0.70rem] py-1 rounded-lg"
             ><a href="/rss.xml"><i class="fa fa-rss"></i></a></span
           >
-          <button
-            id="btn"
-            class="ml-0 sm:ml-2 bg-[--accent] mt-4 text-[#000] font-mono font-semibold text-xl md:text-2xl px-2 py-[0.5rem] rounded-md"
-            ><a href="/cv">Download CV</a></button
+          <span
+            class="bg-[--accent] text-[--base-line100] font-mono font-semibold text-3xl ml-2 px-2 py-1 rounded-md"
+            ><a href="mailto:sahaskamble282@gmail.com"
+              ><i class="fa fa-envelope"></i></a
+            ></span
           >
         </div>
       </div>
     </div>
 
-    <div class="mx-4 px-2">
+    <article class="mx-auto px-3">
       <p class="text-2xl my-5">
         Welcome to my site, here I make <span
           class="text-[--accent] font-semibold">visually</span
@@ -63,44 +70,113 @@ import "../global/global.css"
         etc... and recently starte learning a new js framework called astrojs
         you can read more on my blog about it.
       </p>
+    </article>
+  </section>
+
+  <section>
+    <div></div>
+  </section>
+
+  <section class="lg:w-[70dvw] mx-auto px-4" id="skills">
+    <div class="text-4xl text-center font-semibold text-[--fg-color] my-10">
+      my skills
     </div>
 
-    <div class="mx-4">
-      <h3 class="text-3xl mt-20 my-8 text-left font-semibold">
-        #I use Arch_BTW
-      </h3>
-      <div>
-        <p class="text-2xl">
-          So, this section is about what I daily drive and for the most part I
-          use <span class="text-[--accent] font-semibold">GNU/Linux</span> more specificaly I use ArchLinux
-        </p>
-      </div>
-      <div class="my-8">
-        <div class="mybg ">
-          <!-- w-[55dvw] h-[70dvh] mx-auto border-2 border-white w-[45dvw] h-[60dvh] -->
-          <Image src={bgc} alt="myimg" class=" mx-auto my-7" />
-        </div>
-      </div>
+    <div class="flex flex-col gap-4">
+      <span class="block text-2xl font-semibold"
+        >Html <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[98%] bg-[--accent] text-center rounded-md"
+            >98%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >CSS <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[90%] bg-[--accent] text-center rounded-md"
+            >90%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >JS <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[90%] bg-[--accent] text-center rounded-md"
+            >90%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >C-Language <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[95%] bg-[--accent] text-center rounded-md"
+            >95%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >Python <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[80%] bg-[--accent] text-center rounded-md"
+            >80%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >Java <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[70%] bg-[--accent] text-center rounded-md"
+            >70%</span
+          ></span
+        ></span
+      >
+      <span class="block text-2xl font-semibold"
+        >C# <span class="block w-full border border-white rounded-md"
+          ><span class="block w-[55%] bg-[--accent] text-center rounded-md"
+            >55%</span
+          ></span
+        ></span
+      >
     </div>
-  </div>
-</Layout>
+  </section>
 
-<style>
-  @media (min-width: 375px) {
-    #btn {
-      margin-top: 0px;
-      margin-left: 0.5rem;
-      flex-wrap: nowrap;
+  <section
+    class="w-screen lg:w-[70dvw] h-fit mx-auto mt-32 mb-14 px-4 border-2 border-[--accent] rounded-xl"
+    id="about"
+  >
+    <div class="text-4xl text-center font-semibold text-[--fg-color] my-10">
+      a bit about myself...
+    </div>
+
+    <article class="px-3 pb-3">
+      <p class="text-2xl my-6">
+        I'm a BCA 3yr student, I love programming and making visually stunning
+        website's, I've done server maintainance work for 4 months as a
+        freelancer and also started learning ML for ai development, and learning
+        more like 'Lambda api', 'OpenAi api'.
+      </p>
+      <p class="text-2xl my-4">
+        I've learned all major web frameworks like React, Next, Remix, Svelte,
+        Astro, etc... and can work also with PHP I'm now learning CodeIgniter
+        php framework I made blog about it you <a
+          class="text-[--accent] font-semibold"
+          href="">read more here</a
+        >.
+      </p>
+    </article>
+  </section>
+
+  <section
+    class="lg:w-[65dvw] w-screen h-[20dvh] grid place-items-center mx-auto mb-8 px-3"
+    id="contact"
+  >
+    <div class="text-3xl font-semibold">Email : sahaskamble282@gmail.com</div>
+  </section>
+
+  <Footer link="sahaskamble.github.io" />
+
+  <style>
+    .mypic {
+      width: 130dvw;
+      height: 300px;
+      background-image: url("../img/mypic.png");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
-  }
-
-  .mybg{
-    /* background-image: url('../img/backg.png'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* filter: blur(5px); */
-    /* -webkit-filter: blur(5px); */
-    position: sticky;
-    z-index: -10;
-  }
-</style>
+  </style>
+</Layout>
