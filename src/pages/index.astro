@@ -1,182 +1,74 @@
 ---
-//components here...
 import Layout from "../layouts/Layout.astro"
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
 import { Image } from "astro:assets"
 
-//Images
-import logo from "../img/avatar.jpg"
-
-//Page CSS...
+//css
 import "../global/global.css"
+// import pic from "../img/Logo.jpg"
 ---
 
 <Layout title="Sahas kamble, aka SK">
-  <Navbar />
-
-  <section
-    class="w-screen lg:w-[70dvw] h-fit mx-auto px-4 py-4 lg:px-0"
-    id="main"
-  >
-    <div class="text-4xl text-center font-semibold text-[--fg-color]">
-      Introducation
-    </div>
-    <div
-      class="mx-auto my-8 h-fit py-8 px-4 bg-[--primary] rounded-md flex flex-col justify-center items-center gap-10 md:flex-row"
+  <div class="" id="main">
+    <Navbar Name="SahasKamble" />
+    <section
+      class="hero h-[85dvh] mx-auto px-6 flex justify-evenly items-center"
+      id="hero"
     >
-      <Image
-        class="rounded-[50%] w-[200px] h-[200px] mr-2 ml-6"
-        src={logo}
-        alt="Logo"
-      />
-      <div class="flex-1 lg:ml-8 flex flex-col items-start justify-center">
-        <h3 class="text-7xl font-bold my-2">Sahas kamble</h3>
-        <p class="text-xl">I love doing programming and making website's</p>
-        <div class="my-2 sm:h-[60px] h-[80px] flex items-center flex-wrap">
-          <span class="text-3xl bg-red-400 px-[0.60rem] py-1 rounded-lg"
-            ><a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a
-            ></span
-          >
-          <span
-            class="text-3xl text-black bg-white px-[0.70rem] py-1 mx-2 rounded-lg"
-            ><a href="https://github.com/sahaskamble"
-              ><i class="fa fa-github"></i></a
-            ></span
-          >
-          <span class="text-3xl bg-orange-400 px-[0.70rem] py-1 rounded-lg"
-            ><a href="/rss.xml"><i class="fa fa-rss"></i></a></span
-          >
-          <span
-            class="bg-[--accent] text-[--base-line100] font-mono font-semibold text-3xl ml-2 px-2 py-1 rounded-md"
-            ><a href="mailto:sahaskamble282@gmail.com"
-              ><i class="fa fa-envelope"></i></a
-            ></span
-          >
+      <div class="md:w-[80dvw] w-full md:px-2rem md:pl-[5rem] flex-1">
+        <div class="text-8xl font-semibold leading-[80px]">Sahas kamble</div>
+        <p class="text-xl font-semibold my-6">
+          Programmer &amp; Web developer 🖖<br />
+           I use Arch BTW 😉
+        </p>
+        <div
+          class="w-[100px] flex justify-center items-center px-2 py-2 rounded-[1rem] bg-[--color1] text-black text-xl font-semibold"
+        >
+          Connect
         </div>
       </div>
-    </div>
+      <div class="hidden text-5xl lg:flex flex-col items-center gap-6 w-fit">
+        <span class="socials"><a href=""><i class="fa fa-github"></i></a></span>
+        <span class="socials"
+          ><a href=""><i class="fa fa-instagram"></i></a></span
+        >
+        <span class="socials"><a href=""><i class="fa fa-twitch"></i></a></span>
+      </div>
+    </section>
 
-    <article class="mx-auto px-3">
-      <p class="text-2xl my-5">
-        Welcome to my site, here I make <span
-          class="text-[--accent] font-semibold">visually</span
-        > stunning but fast web app's whether you need a E-commerce website or a
-        landing page for your work/services.
-      </p>
-      <p class="text-2xl my-4">
-        I'm there to help you with it and styling is my speciality I've used
-        various CSS frameworks like tailwindcss, bootstrap, bulmacss, muicss,
-        etc... and recently starte learning a new js framework called astrojs
-        you can read more on my blog about it.
-      </p>
-    </article>
-  </section>
+    <section class="tech" id="tech">
+      <div>
+        <!-- <div class=""> -->
+        <!--   <Image src={} alt="techpic" /> -->
+        <!-- </div> -->
+        <!-- <div class=""> -->
+        <!--   <Image src={} alt="techpic" /> -->
+        <!-- </div> -->
+        <!-- <div class=""> -->
+        <!--   <Image src={} alt="techpic" /> -->
+        <!-- </div> -->
+        <!-- <div class=""> -->
+        <!--   <Image src={} alt="techpic" /> -->
+        <!-- </div> -->
+        <!-- <div class=""> -->
+        <!--   <Image src={} alt="techpic" /> -->
+        <!-- </div> -->
+      </div>
+    </section>
 
-  <section>
-    <div></div>
-  </section>
-
-  <section class="lg:w-[70dvw] mx-auto px-4" id="skills">
-    <div class="text-4xl text-center font-semibold text-[--fg-color] my-10">
-      my skills
-    </div>
-
-    <div class="flex flex-col gap-4">
-      <span class="block text-2xl font-semibold"
-        >Html <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[98%] bg-[--accent] text-center rounded-md"
-            >98%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >CSS <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[90%] bg-[--accent] text-center rounded-md"
-            >90%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >JS <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[90%] bg-[--accent] text-center rounded-md"
-            >90%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >C-Language <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[95%] bg-[--accent] text-center rounded-md"
-            >95%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >Python <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[80%] bg-[--accent] text-center rounded-md"
-            >80%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >Java <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[70%] bg-[--accent] text-center rounded-md"
-            >70%</span
-          ></span
-        ></span
-      >
-      <span class="block text-2xl font-semibold"
-        >C# <span class="block w-full border border-white rounded-md"
-          ><span class="block w-[55%] bg-[--accent] text-center rounded-md"
-            >55%</span
-          ></span
-        ></span
-      >
-    </div>
-  </section>
-
-  <section
-    class="w-screen lg:w-[70dvw] h-fit mx-auto mt-32 mb-14 px-4 border-2 border-[--accent] rounded-xl"
-    id="about"
-  >
-    <div class="text-4xl text-center font-semibold text-[--fg-color] my-10">
-      a bit about myself...
-    </div>
-
-    <article class="px-3 pb-3">
-      <p class="text-2xl my-6">
-        I'm a BCA 3yr student, I love programming and making visually stunning
-        website's, I've done server maintainance work for 4 months as a
-        freelancer and also started learning ML for ai development, and learning
-        more like 'Lambda api', 'OpenAi api'.
-      </p>
-      <p class="text-2xl my-4">
-        I've learned all major web frameworks like React, Next, Remix, Svelte,
-        Astro, etc... and can work also with PHP I'm now learning CodeIgniter
-        php framework I made blog about it you <a
-          class="text-[--accent] font-semibold"
-          href="">read more here</a
-        >.
-      </p>
-    </article>
-  </section>
-
-  <section
-    class="lg:w-[65dvw] w-screen h-[20dvh] grid place-items-center mx-auto mb-8 px-3"
-    id="contact"
-  >
-    <div class="text-3xl font-semibold">Email : sahaskamble282@gmail.com</div>
-  </section>
-
-  <Footer link="sahaskamble.github.io" />
-
-  <style>
-    .mypic {
-      width: 130dvw;
-      height: 300px;
-      background-image: url("../img/mypic.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  </style>
+    <Footer />
+  </div>
 </Layout>
+
+<style>
+  .flip {
+    box-shadow: 0 4px 8px rgb(97, 184, 236);
+  }
+  .image-flip {
+    transition: transform 0.8s ease-in-out;
+  }
+  .image-flip:hover {
+    transform: rotate(360deg);
+  }
+</style>

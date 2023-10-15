@@ -1,92 +1,93 @@
 ---
-//for nav links
+import "../global/global.css"
+
+//menu links
 const items = [
   {
-    name: "~/Home",
+    name: "Home",
     path: "/",
   },
   {
-    name: "~/Skills",
-    path: "#skills",
+    name: "About",
+    path: "/about",
   },
   {
-    name: "~/About",
-    path: "#about",
+    name: "Work",
+    path: "/work",
+  },
+  {
+    name: "Blog",
+    paht: "/blog",
   },
 ]
 ---
 
-<header class="lg:w-[85dvw] w-full mx-auto sticky top-0 bg-[--bg-color]">
-  <nav aria-label="Primary ">
-    <div class="flex justify-around items-center h-fit py-4">
-      <div class="lg:text-3xl text-2xl font-mono font-semibold pl-6">
-        <a href="/">Sahas@kamble:~</a>
-      </div>
-      <div class="flex-1"></div>
-      <div id="opennav" class="md:flex">
-        <ul id="navbar" class="hidden md:flex gap-1 font-[600] text-xl">
-          {
-            items.map((item) => (
-              <li>
-                <a href={item.path} class="px-2 py-3 hover:text-[#0c8ac5]">
-                  {item.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div
-        id="hamburger"
-        class="nav-links mr-4 cursor-pointer flex items-center flex-col md:hidden"
-      >
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <div class="bar bar3"></div>
-      </div>
+<header class="bg-[--color1] text-black">
+  <nav class="flex justify-around w-[90dvw] mx-auto">
+    <ul
+      class="lg:flex menu-items items-center gap-10 text-xl font-semibold"
+      id="menu-items"
+    >
+      {
+        items.map((item) => (
+          <li class="links">
+            <a href={item.path}>{item.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="flex-1 lg:hidden"></div>
+
+    <div
+      class="hamburger block lg:hidden mr-2 cursor-pointer my-1 rounded"
+      id="hamburger"
+    >
+      <div class="bars bar1 block"></div>
+      <div class="bars bar2 block"></div>
+      <div class="bars bar3 block"></div>
     </div>
   </nav>
 </header>
 
 <style>
-  li > a {
-    transition: 100ms;
-    border: 0px solid var(--fg-color);
-  }
-  li > a:hover {
-    color: #498dc8;
-  }
-
-  .bar {
+  .bars {
     width: 35px;
-    height: 4px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
+    height: 5px;
+    margin: 5px 0px;
+    background-color: rgb(0, 0, 0);
   }
-
-  .change .bar1 {
-    transform: translate(0, 11.5px) rotate(-45deg);
+  #logo-p1,
+  #logo-p2 {
+    transform: rotate(10deg);
   }
-  .change .bar2 {
-    opacity: 0;
+  .links {
+    padding: 10px 15px;
   }
-  .change .bar3 {
-    transform: translate(0, -11.5px) rotate(45deg);
-  }
-
-  #navbar.active {
+  .socials {
+    width: 50px;
+    height: 40px;
     display: flex;
-    position: fixed;
-    right: 0;
-    top: 60px;
-    width: 100%;
-    height: 300px;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    background-color: rgba(29, 31, 33, 0.85);
-    backdrop-filter: blur(10px);
+    padding: 10px 10px;
+    border-radius: 10%;
+    transition: transform 0.7s ease-in-out;
+  }
+  .links:hover {
+    color: rgb(97, 184, 236);
+    background-color: var(--color-bg);
+  }
+  .socials:hover {
+    transform: rotate(360deg);
+  }
+  .hamburger {
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid #000;
+    border-radius: 6px;
+  }
+  .hamburger:hover {
+    background-color: #71adf0;
   }
 </style>

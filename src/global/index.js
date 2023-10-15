@@ -1,8 +1,7 @@
-const ham = document.getElementById('hamburger');
-const opnav = document.getElementById('navbar');
+const ham = document.getElementById("hamburger")
+const opnav = document.getElementById("menu-items")
 
-ham.addEventListener("click", ()=> { 
-    opnav.classList.toggle('active');
-    opnav.classList.toggle('hidden');    
-    ham.classList.toggle('change');
-});
+ham.addEventListener("click", () => {
+    opnav.classList.toggle("active")
+    ham.classList.toggle("change")
+})

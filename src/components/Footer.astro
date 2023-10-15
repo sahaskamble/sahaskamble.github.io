@@ -1,41 +1,13 @@
 ---
-//variables
-const d = new Date()
-const { link } = Astro.props
+
 ---
 
-<footer class="w-full h-[20dvh] flex flex-col justify-between">
-  <section
-    class="flex justify-center text-4xl gap-12 border-b border-white w-[80dvw] mx-auto py-3"
-  >
-    <span class="icon">
-      <a href=""><i class="fa fa-youtube-play"></i></a>
-    </span>
-
-    <span class="icon">
-      <a href=""><i class="fa fa-github"></i></a>
-    </span>
-
-    <span class="icon">
-      <a href=""><i class="fa fa-instagram"></i></a>
-    </span>
-
-    <span class="icon">
-      <a href=""><i class="fa fa-linkedin"></i></a>
-    </span>
-  </section>
-
-  <section class="w-full text-center my-4">
-    <span class="font-semibold text-xl"
-      >&copy;{d.getFullYear()}, <a class="hover:text-[--accent]" href="/"
-        >{link}</a
-      ></span
-    >
-  </section>
+<footer class="h-fit font-semibold py-3 px-3 flex lg:justify-between flex-col items-center">
+  <div class="text-4xl lg:hidden flex justify-evenly items-center gap-8 w-fit py-4">
+    <span class="socials"><a href=""><i class="fa fa-github"></i></a></span>
+    <span class="socials"><a href=""><i class="fa fa-instagram"></i></a></span>
+    <span class="socials"><a href=""><i class="fa fa-twitch"></i></a></span>
+  </div>
+  <div>&copy; 2023 Sahas kamble</div>
+  <div><a href="/">https://sahaskamble.github.io</a></div>
 </footer>
-
-<style>
-  .icon:hover {
-    color: var(--accent);
-  }
-</style>
