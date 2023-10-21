@@ -1,0 +1,70 @@
+---
+import { Icon } from "astro-icon";
+
+// Others components...
+const items = [
+    {
+        name : "Home",
+        path : "/",
+    },
+
+    {
+        name : "Blog",
+        path : "/blog",
+    },
+
+	{
+        name : "my-setup",
+        path : "/setup",
+    },
+];
+---
+
+<header class="h-16 flex items-center lg:flex-nowrap flex-wrap dark:bg-[--dark-bg] dark:text-[--dark-fg]">
+	<nav class="flex justify-end items-center gap-6 w-[85dvw] mx-auto my-auto py-4">
+
+		<div class="links hidden md:flex items-center gap-10 text-xl font-semibold">
+			<div class="icons"><a href="https://github.com"><i class="fa-brands fa-github"></i></a></div>
+			<div class="icons"><a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a></div>
+			<div class="icons"><a href="https://linkedin.com"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>	
+			<div class="">|</div>
+		</div>
+		
+		<Icon name="ph:sun-bold" class="w-[30px] h-[30px] cursor-pointer" id="theme_switcher" />
+
+		<div id="hamburger" class="hamburger md:hidden block cursor-pointer">
+			<div class="bars w-[30px] h-[5px] bg-black dark:bg-[--dark-fg]"></div>
+			<div class="bars w-[30px] h-[5px] bg-black dark:bg-[--dark-fg]"></div>
+			<div class="bars w-[30px] h-[5px] bg-black dark:bg-[--dark-fg]"></div>
+		</div>
+
+	</nav>
+
+	<div class="md:hidden w-[250px] bg-white dark:bg-[--dark-bg] dark:text-[--dark-fg] border border-black dark:border-white h-[400px] rounded-xl" id="burger">
+		{
+		items.map((item)=> (
+			<div class="link text-2xl font-semibold underline"><a href={item.path}>{item.name}</a></div>
+		))
+		}
+		<div class="flex gap-6">
+			<div class="icons text-[40px]"><a href="https://github.com"><i class="fa-brands fa-github"></i></a></div>
+			<div class="icons text-[40px]"><a href="https://youtube.com"><i class="fa fa-youtube-play"></i></a></div>
+			<div class="icons text-[40px]"><a href="https://linkedin.com"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>	
+		</div>
+	</div>
+
+</header>
+
+<style>
+.icons{
+	font-size: 40px;
+	transition: 0.7s;
+}
+
+.icons:hover{
+	transform: rotate(360deg);
+}
+.bars{
+	margin: 5px;
+}
+</style>
