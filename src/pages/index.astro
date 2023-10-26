@@ -3,68 +3,138 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
 
 // Other imports...
 import "../global/style.css";
-import pic1 from "/public/img/img2.jpg";
+import pic1 from "/public/img/test.png";
+import pic2 from "/public/img/Responsive-watches-website.png";
 
 // Others components...
-const items = [
-    {
-        name : "Home",
-        path : "/",
-    },
-
-    {
-        name : "Blog",
-        path : "/blog",
-    },
-
-	{
-        name : "my-setup",
-        path : "/setup",
-    },
-];
 ---
 
 <Layout title="Sahas kamble, aka SK">
-    <div class="dark:bg-[--dark-bg] dark:text-[--dark-fg]">
-        <Navbar name="SahasKamble"/>
+	<!-- <Image class="border-2 border-black" src={pic1} alt="my img" width="300" height="100" /> -->
+	<Navbar />
 
-        <div class="md:flex justify-center gap-8 hidden w-full p-4">
-            {
-            items.map((item)=> (
-                <div class="link text-2xl font-semibold underline"><a href={item.path}>{item.name}</a></div>
-            ))
-            }
-        </div>
-        <main id="hero" class="hero">
-            <section class="md:w-[70dvw] w-[90dvw] mx-auto intro py-8">
-                <h1 class="md:text-[10dvw] text-7xl font-bold">Hey, <br>I'm Sahas <span class="text-4xl">👋</span></h1>
-                <div class="my-8 md:w-[60dvw] w-full ml-auto">
-                    <p class="text-4xl font-semibold text-end">
-                        — a web designer, programmer and a youtuber  
-                    </p>
-                </div>
-            </section>
-            
-            <section class="myimg w-[95dvw] mx-auto flex justify-center">
-                <Image class="rounded-[30px] border-2 border-black dark:border-white" id="img" src={pic1} alt="my image" />
-            </section>
+	<!-- Main section -->
+	<main class="p-10">
+		<div
+			class="h-fit my-4 lg:h-[85dvh] flex justify-around items-center gap-8 lg:flex-nowrap flex-wrap"
+			id="Intro"
+		>
+			<div class="lg:w-[50%] w-full h-fit">
+				<p class="">
+					<span class="md:text-8xl text-6xl font-bold"
+						>Hey,<br />I'm Sahas Kamble,</span
+					>
 
-            <section class="md:w-[70dvw] mx-auto my-8 py-3">
-                <div class="flex flex-col text-end px-5">
-                    <h3 class="md:text-6xl text-4xl font-semibold pb-4">a bit about me,</h3>
-                    <div class="md:w-[60dvw] ml-auto">
-                        <p class="text-2xl">
-                            I'm a BCA undergraduate from maharashtra, India. who has a spark for creativaty and wanna make web alive again like good old day's
-                        </p> 
-                    </div>
-                </div>
-            </section
-        </main>
+					<div class="md:text-4xl text-3xl py-4">
+						I'm a web designer, programmer, Linux youtuber and the
+						creator of occasionally useful side-project.
+					</div>
+				</p>
+			</div>
 
-        <Footer/>
-    </div>
+			<Image src={pic1} alt="myimg" />
+		</div>
+
+		<div class="py-8" id="Projects">
+			<div
+				class="text-3xl m-6 font-bold w-[60dvw] mx-auto text-center p-4 bg-black text-white border border-black"
+			>
+				Projects
+			</div>
+			<div></div>
+
+			<Image src={pic2} alt="project img" />
+		</div>
+
+		<div
+			class="w-full h-fit py-16 flex flex-col justify-start gap-4 items-center"
+			id="TechStack"
+		>
+			<div
+				class="text-3xl font-bold w-[60dvw] text-center p-4 bg-black text-white"
+			>
+				Tech stack
+			</div>
+
+			<div
+				class="w-full border-t-2 border-black py-6 grid place-items-center grid-cols-1 md:grid-cols-3"
+				id="techstack"
+			>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:html-5" />
+					<span class="text-2xl">95%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:css-3" />
+					<span class="text-2xl">80%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:javascript" />
+					<span class="text-2xl">80%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:react" />
+					<span class="text-2xl">65%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:python" />
+					<span class="text-2xl">85%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:linux-tux" />
+					<span class="text-2xl">98%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:c" />
+					<span class="text-2xl">90%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:java" />
+					<span class="text-2xl">70%</span>
+				</div>
+				<div class="mx-12" id="logos">
+					<Icon class="icony" name="logos:astro" />
+					<span class="text-2xl">60%</span>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<Footer />
 </Layout>
 
+<style>
+	#techstack {
+		/* display: flex; */
+		/* display: grid; */
+		/* grid-template-columns: repeat(3, 1fr); */
+		/* place-items: center; */
+		/* flex-wrap: wrap; */
+		/* justify-content: space-around; */
+	}
+	.icony {
+		flex: 0 0;
+		width: 200px;
+		height: 250px;
+		padding: 2rem;
+	}
+	#logos > span {
+		display: block;
+		background-color: #000;
+		color: #fff;
+		padding: 0.2rem;
+		margin-bottom: 0.3rem;
+		/* border-radius: 6px; */
+		text-align: center;
+	}
+	#logos {
+		text-align: center;
+		margin: 1.5rem;
+		border-bottom: 1px solid black;
+	}
+</style>

@@ -1,33 +1,33 @@
-:root{
-	--background: #161616;
-	--foreground: rgb(230, 224, 233);
-	--color-1: #daa5ef;
-	--dark-bg: #000;
-	--dark-fg: #fff;
+:root {
+  --background: #161616;
+  --foreground: rgb(230, 224, 233);
+  --color-1: #daa5ef;
+  --dark-bg: #000;
+  --dark-fg: #fff;
 }
 
 html,
-body{
-	box-sizing: border-box;
+body {
+  box-sizing: border-box;
 }
 
-#burger{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	position: fixed;
-	right: -400%;
-	top: 60px;
-	transition: 0.3s ease-in-out;
+#burger {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  right: -400%;
+  top: 60px;
+  transition: 0.3s ease-in-out;
 }
 
-#burger.active{
-	position: fixed;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	right: 5%;
-	top: 60px;
+#burger.active {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  right: 5%;
+  top: 60px;
 }

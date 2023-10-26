@@ -1,0 +1,6 @@
+This logo was generated using the following font:
+
+- Font Title: Nova Cut
+- Font Author: http://scripts.sil.org/OFL
+- Font Source: http://fonts.gstatic.com/s/novacut/v24/KFOkCnSYu8mL-39LkWxPKTM1K9nz.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

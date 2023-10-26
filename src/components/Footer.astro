@@ -1,9 +1,49 @@
 ---
+// Others components...
+const items = [
+	{
+		name: "Home",
+		path: "/",
+	},
 
+	{
+		name: "Blog",
+		path: "/blog",
+	},
+
+	{
+		name: "my-setup",
+		path: "/setup",
+	},
+];
 ---
 
-<footer class="w-[80dvw] mx-auto h-[50px] flex justify-center items-center border-t-2 border-black dark:border-white">
-	<div class="text-xl">
-		<p>&copy; 2023 — <a href="https://sahaskamble.github.io">sahaskamble</a></p>
+<footer
+	class="w-full bg-black text-white mx-auto lg:h-[10dvh] h-[25dvh] flex flex-col justify-center items-center border-t-2 border-black dark:border-white"
+>
+	<div
+		class="w-fit h-fit text-2xl flex lg:hidden justify-around items-center gap-8 flex-wrap py-2"
+	>
+		{
+			items.map((item) => (
+				<div class="text-gray-300 underline">
+					<a href={item.path}>{item.name}</a>
+				</div>
+			))
+		}
+	</div>
+
+	<div class="text-xl px-2 text-center">
+		<p>
+			&copy; 2023 — <a href="https://sahaskamble.github.io">sahaskamble</a
+			>
+			 made using <a href="https://astro.build">astro-js</a>
+		</p>
 	</div>
 </footer>
+
+<style>
+	a {
+		text-decoration: underline;
+	}
+</style>
