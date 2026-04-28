@@ -1,0 +1,278 @@
+# Instincts generated from https://github.com/sahaskamble/sahaskamble.github.io
+# Generated: 2026-04-28T06:50:05.838Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: sahaskamble.github.io-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Commit Length
+
+## Action
+
+Write moderate-length commit messages (~61 characters)
+
+## Evidence
+
+- Average commit message length: 61 chars
+- Based on 1 commits
+
+---
+id: sahaskamble.github.io-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: sahaskamble.github.io-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: sahaskamble.github.io-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: sahaskamble.github.io-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: sahaskamble.github.io-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: sahaskamble.github.io-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: sahaskamble.github.io-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: sahaskamble.github.io-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: sahaskamble.github.io-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: sahaskamble.github.io-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: sahaskamble.github.io-instinct-error-handling
+trigger: "When handling errors in code"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Error Handling
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style
+
+---
+id: sahaskamble.github.io-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Commit Format
+
+## Action
+
+Write a freeform message, optionally starting with a markdown heading (e.g., ###), and keep the message concise (~61 characters on average)
+
+## Evidence
+
+- Seen in commit: '### Refactor project data management and optimize performance'
+- Pattern in commits.examples
+
+---
+id: sahaskamble.github.io-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: sahaskamble/sahaskamble.github.io
+---
+
+# Sahaskamble.github.io Instinct Test Location
+
+## Action
+
+Place test files in a separate location from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
