@@ -1,100 +1,50 @@
 "use client"
 
 import { useParams, useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, Calendar, Star, Zap } from "lucide-react"
+import { ArrowLeft, Calendar, Star } from "lucide-react"
+import { projects, getProjectBySlug, type Project } from "@/data/projects"
 
-const projects = [
-  {
-    slug: "study-wings-platform",
-    title: "Study Wings Platform",
-    description:
-      "Educational platform for students to apply to universities worldwide with frontend development and system design.",
-    year: "2022",
-    technologies: ["React.js", "Frontend Development", "System Design", "UI/UX"],
-    features: ["University applications", "Student portal", "Application tracking", "Document management"],
-    category: "Web Application",
-    difficulty: "Beginner",
-    xpReward: 600,
-    questType: "Tutorial Quest",
-    icon: Star,
-    difficultyColor: "text-green-500",
-    achievements: ["First Steps", "UI Designer", "System Thinker"],
-    challenges: [
-      "Learning React fundamentals",
-      "Understanding component architecture",
-      "Implementing responsive design",
-    ],
-    detailedDescription:
-      "My first major project that introduced me to the world of React development. Built a comprehensive platform where students could browse universities, submit applications, and track their progress. This project taught me the fundamentals of component-based architecture and responsive design principles.",
-    technicalDetails: [
-      "Built with React.js using functional components and hooks",
-      "Implemented responsive design with CSS Grid and Flexbox",
-      "Created reusable UI components for consistent design",
-      "Integrated with university APIs for real-time data",
-    ],
-    keyLearnings: [
-      "Component-based architecture principles",
-      "State management with React hooks",
-      "Responsive web design best practices",
-      "API integration and data handling",
-    ],
-  },
-  {
-    slug: "eatofy-pos-system",
-    title: "Eatofy POS System",
-    description:
-      "Comprehensive restaurant billing and management system with inventory tracking and third-party integrations.",
-    year: "2022-2023",
-    technologies: ["React.js", "Node.js", "Inventory Management", "API Integration"],
-    features: ["Fast billing system", "Inventory management", "Swiggy/Zomato integration", "Staff management"],
-    category: "Web Application",
-    difficulty: "Advanced",
-    xpReward: 1000,
-    questType: "Main Quest",
-    icon: Zap,
-    difficultyColor: "text-orange-500",
-    achievements: ["POS Master", "Integration Expert", "Inventory Specialist"],
-    challenges: ["Real-time inventory synchronization", "Third-party API integration", "Complex billing calculations"],
-    detailedDescription:
-      "A full-featured restaurant management system that handles everything from order taking to inventory management. Integrated with major food delivery platforms and includes advanced features like staff performance tracking and automated low-stock alerts.",
-    technicalDetails: [
-      "Full-stack application with React.js frontend and Node.js backend",
-      "Real-time inventory tracking with WebSocket connections",
-      "Integration with Swiggy and Zomato APIs for order synchronization",
-      "Advanced reporting system with data visualization",
-    ],
-    keyLearnings: [
-      "Full-stack development with React and Node.js",
-      "Real-time data synchronization techniques",
-      "Third-party API integration strategies",
-      "Complex business logic implementation",
-    ],
-  },
-  // Add other projects with slugs...
-]
+// Map icon names to actual components
+const iconMap: Record<string, React.ElementType> = {
+  Star: Star,
+  Zap: ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>
+  ),
+  Shield: ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  ),
+  Gamepad2: ({ className }: { className?: string }) => (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+    </svg>
+  ),
+}
 
 export default function ProjectDetailPage() {
   const params = useParams()
   const router = useRouter()
-  const [project, setProject] = useState<any>(null)
   const [isUnlocked, setIsUnlocked] = useState(false)
 
-  useEffect(() => {
+  const project = useMemo(() => {
     const slug = params.slug as string
-    const foundProject = projects.find((p) => p.slug === slug)
+    return getProjectBySlug(slug)
+  }, [params.slug])
 
-    if (foundProject) {
-      setProject(foundProject)
-
+  useEffect(() => {
+    if (project) {
       // Check if project is unlocked from localStorage
       const unlockedProjects = JSON.parse(localStorage.getItem("unlockedProjects") || '["study-wings-platform"]')
-      setIsUnlocked(unlockedProjects.includes(slug))
+      setIsUnlocked(unlockedProjects.includes(project.slug))
     }
-  }, [params.slug])
+  }, [project])
 
   if (!project) {
     return (
@@ -128,7 +78,7 @@ export default function ProjectDetailPage() {
     )
   }
 
-  const IconComponent = project.icon
+  const IconComponent = iconMap[project.icon] || Star
 
   return (
     <div className="min-h-screen bg-background py-20">
