@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-sheet: #f3f4f1;
+  --color-greenbar: #e4e9df;
+  --color-ink: #171a17;
+  --color-ink-dim: #3a3f3a;
+  --color-live: #157f3a;
+  --color-hold: #8a5e00;
+  --color-halt: #c0272d;
+  --color-border: #171a1730;
+  --color-border-strong: #171a17;
+  --font-display: var(--font-big-shoulders);
+  --font-body: var(--font-public-sans);
+  --font-mono: var(--font-ibm-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::selection {
+  background: #157f3a30;
+  color: #171a17;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f4f1;
+  color: #171a17;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Paper-grain texture overlay — subtle static noise at 4% opacity */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("/grain.png");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #157f3a;
+  outline-offset: 2px;
+}
+
+/* ── Receipt zigzag tear-off edge ── */
+.receipt-zigzag {
+  position: relative;
+  overflow: visible;
+}
+.receipt-zigzag::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  z-index: 2;
+  background:
+    linear-gradient(135deg, var(--color-sheet) 50%, transparent 50%) 0 0 / 8px
+    8px,
+    linear-gradient(225deg, var(--color-sheet) 50%, transparent 50%) 0 0 / 8px
+    8px;
+}
+
+/* ── Ticket stub semicircular notches ── */
+.ticket-notch {
+  position: relative;
+  overflow: visible;
+}
+.ticket-notch::before,
+.ticket-notch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-sheet);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.ticket-notch::before {
+  left: -8px;
+  box-shadow: inset -1px 0 0 var(--color-border-strong);
+}
+.ticket-notch::after {
+  right: -8px;
+  box-shadow: inset 1px 0 0 var(--color-border-strong);
+}
+
+/* ── Tabular figures for numbers ── */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Route dot animation — the ONLY allowed motion on the page ── */
+.route-dot {
+  offset-path: path(
+    "M20 70 L60 70 L80 30 L130 30 L150 50 L200 50 L220 70 L280 70"
+  );
+  offset-anchor: center;
+  animation: move-dot 24s linear infinite;
+}
+
+@keyframes move-dot {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-dot {
+    animation: none;
+    offset-distance: 0%;
+  }
 }

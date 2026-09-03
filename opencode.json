@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "frontend/AGENTS.md",
+    ".opencode/skills/admin-design-system.md",
+    ".opencode/skills/admin-component-conventions.md",
+    ".opencode/skills/datatable-pattern.md"
+  ],
+  "mcp": {
+    "gitnexus": {
+      "type": "local",
+      "command": ["/usr/bin/gitnexus", "mcp"]
+    },
+    "context7": {
+      "type": "local",
+      "command": ["npx", "-y", "@upstash/context7-mcp"]
+    },
+    "shadcn-ui": {
+      "type": "local",
+      "command": ["npx", "-y", "@jpisnice/shadcn-ui-mcp-server"]
+    },
+    "firecrawl": {
+      "type": "remote",
+      "url": "https://mcp.firecrawl.dev/v2/mcp-oauth"
+    }
+  }
+}

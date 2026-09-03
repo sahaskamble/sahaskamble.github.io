@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-24T00:00:00.000Z",
+  "title": "Design System: Appniche Technologies",
+  "extensions": {
+    "colorMeta": {
+      "navy-950": {
+        "role": "neutral",
+        "displayName": "Midnight Navy",
+        "canonical": "#060b16",
+        "tonalRamp": [
+          "#060b16",
+          "#0a1121",
+          "#0f182d",
+          "#163051",
+          "#1e4270",
+          "#2a5a8a",
+          "#4a7ab0",
+          "#7aa3d0"
+        ]
+      },
+      "navy-900": {
+        "role": "neutral",
+        "displayName": "Deep Navy",
+        "canonical": "#0a1121",
+        "tonalRamp": [
+          "#0a1121",
+          "#0f182d",
+          "#163051",
+          "#1e4270",
+          "#2a5a8a",
+          "#4a7ab0",
+          "#7aa3d0",
+          "#a8c4e0"
+        ]
+      },
+      "navy-800": {
+        "role": "neutral",
+        "displayName": "Slate Navy",
+        "canonical": "#0f182d",
+        "tonalRamp": [
+          "#0f182d",
+          "#163051",
+          "#1e4270",
+          "#2a5a8a",
+          "#4a7ab0",
+          "#7aa3d0",
+          "#a8c4e0",
+          "#d0e0f0"
+        ]
+      },
+      "blue-600": {
+        "role": "primary",
+        "displayName": "Vibrant Blue",
+        "canonical": "#2563EB",
+        "tonalRamp": [
+          "#1e4270",
+          "#2563EB",
+          "#3B82F6",
+          "#60A5FA",
+          "#93C5FD",
+          "#BFDBFE",
+          "#DBEAFE",
+          "#EFF6FF"
+        ]
+      },
+      "blue-500": {
+        "role": "primary",
+        "displayName": "Soft Blue",
+        "canonical": "#3B82F6",
+        "tonalRamp": [
+          "#2563EB",
+          "#3B82F6",
+          "#60A5FA",
+          "#93C5FD",
+          "#BFDBFE",
+          "#DBEAFE",
+          "#EFF6FF",
+          "#F5F9FF"
+        ]
+      },
+      "gray-900": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#111827",
+        "tonalRamp": [
+          "#111827",
+          "#1f2937",
+          "#374151",
+          "#4b5563",
+          "#6b7280",
+          "#9ca3af",
+          "#d1d5db",
+          "#f3f4f6"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#f9fafb",
+          "#f3f4f6",
+          "#e5e7eb",
+          "#d1d5db",
+          "#9ca3af",
+          "#6b7280",
+          "#4b5563",
+          "#ffffff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only — maximum impact, tight leading."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headlines — strong presence with comfortable reading."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card headlines and subsection headers."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Primary reading text — optimal readability at 65ch max width."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, buttons, chips, and UI labels — uppercase for section markers."
+      }
+    },
+    "shadows": [
+      {
+        "name": "subtle",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Barely-there lift for resting elements."
+      },
+      {
+        "name": "medium",
+        "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        "purpose": "Cards and elevated surfaces."
+      },
+      {
+        "name": "prominent",
+        "value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+        "purpose": "Dropdowns, modals, and elevated overlays."
+      },
+      {
+        "name": "dramatic",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Hero elements and focus states."
+      },
+      {
+        "name": "blue-glow",
+        "value": "0 0 60px -12px rgba(59, 130, 246, 0.25)",
+        "purpose": "Interactive hover states, CTAs, and emphasis."
+      },
+      {
+        "name": "intense-glow",
+        "value": "0 0 100px -24px rgba(59, 130, 246, 0.4)",
+        "purpose": "Primary button hover and high-emphasis elements."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-default",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for state transitions — smooth deceleration."
+      },
+      {
+        "name": "ease-bounce",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "purpose": "Playful interactions — micro-animations and emphasis."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Quick feedback — hover states, focus rings."
+      },
+      {
+        "name": "duration-normal",
+        "value": "300ms",
+        "purpose": "Standard transitions — color changes, opacity shifts."
+      },
+      {
+        "name": "duration-slow",
+        "value": "500ms",
+        "purpose": "Deliberate transitions — card elevations, layout changes."
+      },
+      {
+        "name": "duration-slower",
+        "value": "750ms",
+        "purpose": "Dramatic transitions — navigation state changes."
+      },
+      {
+        "name": "duration-display",
+        "value": "1000ms",
+        "purpose": "Hero and page-level transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "2xl",
+        "value": "1440px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action button — vibrant blue with glow hover effect.",
+      "html": "<button class=\"ds-btn-primary\">View Our Work</button>",
+      "css": ".ds-btn-primary { background: #2563EB; color: #fff; padding: 16px 32px; font-weight: 500; font-size: 1rem; border-radius: 16px; border: none; cursor: pointer; transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1); box-shadow: 0 0 60px -12px rgba(59, 130, 246, 0.25); } .ds-btn-primary:hover { background: #3B82F6; box-shadow: 0 0 100px -24px rgba(59, 130, 246, 0.4); transform: translateY(-1px); } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Ghost button for secondary actions — transparent with blue text.",
+      "html": "<button class=\"ds-btn-secondary\">Get in Touch</button>",
+      "css": ".ds-btn-secondary { background: transparent; color: #2563EB; padding: 16px 32px; font-weight: 500; font-size: 1rem; border-radius: 16px; border: 2px solid transparent; cursor: pointer; transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { background: #EFF6FF; border-color: #BFDBFE; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Container for product showcases — white surface with glow hover.",
+      "html": "<div class=\"ds-card\"><h3>Product Name</h3><p>Description here</p></div>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card:hover { border-color: #BFDBFE; box-shadow: 0 0 60px -12px rgba(59, 130, 246, 0.25); }"
+    },
+    {
+      "name": "Tech Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Technology stack indicator — pill-shaped badge with blue accent.",
+      "html": "<span class=\"ds-chip\">React</span>",
+      "css": ".ds-chip { background: #EFF6FF; color: #2563EB; padding: 4px 12px; font-size: 0.75rem; font-weight: 500; border-radius: 9999px; border: 1px solid #DBEAFE; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Top navigation link — gray text with blue hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Products</a>",
+      "css": ".ds-nav-link { font-size: 0.875rem; font-weight: 500; color: #4b5563; text-decoration: none; transition: color 300ms; } .ds-nav-link:hover { color: #2563EB; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Authority",
+    "overview": "A spacious, confident design system that lets the work speak. The aesthetic is modern and restrained — generous whitespace, clear hierarchy, and purposeful motion create an environment where technical capability is demonstrated, not declared. Every element earns its place through function, not decoration.\n\nThe system balances professionalism with approachability. Navy anchors authority and depth, while vibrant blue provides energy and focus. The result is a visual language that feels established and trustworthy without being stiff or corporate.",
+    "keyCharacteristics": [
+      "Spacious layout with generous section breathing room",
+      "Confident typography with strong hierarchy",
+      "Sharp, technical component styling",
+      "Structural shadows for crisp layering",
+      "Purposeful motion that guides without distracting"
+    ],
+    "rules": [
+      {
+        "name": "The Blue Accent Rule",
+        "body": "Vibrant blue is used sparingly — primarily on CTAs, links, and interactive elements. Its rarity creates focus; its absence elsewhere creates calm.",
+        "section": "colors"
+      },
+      {
+        "name": "The Hierarchy Rule",
+        "body": "Never use display weight below display size. Never use body weight above headline size. The hierarchy is sacred.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Elements are flat at rest. Shadows appear on hover, focus, or elevation change — never as static decoration.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use generous whitespace — let content breathe and create hierarchy through spacing",
+      "Do maintain the blue accent sparingly — its rarity creates focus",
+      "Do use structural shadows for elevation, not decoration",
+      "Do keep typography confident — strong weights, clear hierarchy",
+      "Do respect the section rhythm — 8rem between major sections"
+    ],
+    "donts": [
+      "Don't add shadows to static elements — they appear on interaction only",
+      "Don't use blue as a background color — it's reserved for text, borders, and accents",
+      "Don't break the typography hierarchy — never use display weight below display size",
+      "Don't add decorative elements that don't serve function",
+      "Don't reduce section spacing below 6rem — the breathing room is intentional"
+    ]
+  }
+}
